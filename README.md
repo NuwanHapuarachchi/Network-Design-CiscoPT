@@ -113,27 +113,6 @@ The backbone network implements Hot Standby Router Protocol (HSRP) for high avai
 ✅ OSPF routing tables populated correctly  
 ✅ HSRP redundancy functional  
 
-## 📁 Repository Structure
-
-```
-├── Design Report.pdf          # Complete project documentation
-├── README.md                 # This file
-├── images/                   # Network topology diagrams
-│   ├── hsrp-configuration.png    # HSRP redundancy setup
-│   ├── entc-network-topology.png # ENTC department network design
-│   └── university-backbone.png   # Complete university backbone network
-├── Configuration Files/      # Router and switch configurations
-├── Simulation Files/         # Packet Tracer project files
-└── Documentation/           # Additional technical documentation
-```
-
-## 🚀 Future Enhancements
-
-### Scalability Considerations
-- Design supports 20-25 year operational lifetime
-- Modular architecture allows easy expansion
-- VLAN structure accommodates growth
-- Fiber infrastructure ready for higher speeds
 
 ### Technology Upgrades
 - Migration path to newer Cisco hardware
@@ -146,20 +125,6 @@ The backbone network implements Hot Standby Router Protocol (HSRP) for high avai
 - **Hardware Obsolescence:** Simulated devices are end-of-life; production implementation requires current-generation equipment
 - **Pricing Disclaimer:** Listed prices are indicative only due to hardware obsolescence
 - **Packet Tracer Limitations:** Some advanced features (10G SFP+) cannot be fully simulated
-
-## 🤝 Contributing
-
-This project was developed as part of academic coursework. For questions or discussions about the network design:
-
-1. Review the complete design report
-2. Examine network diagrams and configurations  
-3. Consider scalability and security requirements
-4. Evaluate cost-effectiveness of proposed solutions
-
-## 📞 Contact
-
-For technical inquiries regarding this network design project, please contact the development team through the University of Moratuwa, Department of Electronic & Telecommunication Engineering.
-
----
+-
 
 **Disclaimer:** This network design was created for educational purposes as part of the EN2150 course requirements. Implementation in production environments should involve thorough security assessments and updated hardware selections.
