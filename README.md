@@ -4,6 +4,14 @@
 
 This project presents the comprehensive design of a Local Area Network (LAN) infrastructure for the University of Moratuwa (UoM), including both the university backbone network and the internal network for the Department of Electronic and Telecommunication Engineering (ENTC).
 
+**Team: Network Simulation Team - Notwork**
+
+### 👥 Group Members
+- **220212A** HAPUARACHCHI HADND
+- **220221B** HATHURUSINGHA HAR  
+- **220325X** KODITHUWAKKU T N
+- **220115E** DHARMADASA M A A K
+
 ## 🎯 Project Objectives
 
 ### University Backbone Network
@@ -27,12 +35,16 @@ This project presents the comprehensive design of a Local Area Network (LAN) inf
 - **Routing Protocol:** OSPF (Open Shortest Path First)
 - **Redundancy:** HSRP (Hot Standby Router Protocol) implementation
 
+![University Backbone Network](images/university-backbone.png)
+
 ### ENTC Network Design
 - **Topology:** Hierarchical star topology
 - **Core Switch:** Cisco Catalyst 3650-24 (Layer 3)
 - **Access Switches:** Cisco Catalyst 2960-24TT (Layer 2)
 - **Wireless Infrastructure:** Centrally managed access points
 - **Security Integration:** Dedicated VLANs for CCTV and RFID systems
+
+![ENTC Network Topology](images/entc-network-topology.png)
 
 ## 🔧 Technical Specifications
 
@@ -57,20 +69,6 @@ The ENTC network implements 24 VLANs for different purposes:
 - **VLAN 200:** RFID Door Locks (Static IP assignment)
 - **VLAN 220:** CCTV Cameras (Static IP assignment)
 
-## 💰 Cost Analysis
-
-### University Backbone Network
-- **Total Hardware Cost:** $82,503.00
-- **SFP Modules Cost:** $15,554.00
-- **Connection Media Cost:** $2,430.00
-- **Grand Total:** $100,487.00
-
-### ENTC Department Network
-- **Layer 2 Switches (11x 2960-24TT):** LKR 16,500
-- **Layer 3 Switch (1x 3650-24):** LKR 5,000  
-- **Access Points (17 units):** LKR 340
-- **Total Cost:** LKR 21,840
-
 ## 🔒 Security Features
 
 - **VLAN Segmentation:** Isolated network segments for different user types
@@ -78,6 +76,17 @@ The ENTC network implements 24 VLANs for different purposes:
 - **Static IP Assignment:** For critical security devices (cameras, door locks)
 - **Access Control:** Managed through Cisco WLC
 - **Network Monitoring:** Integrated CCTV system on dedicated VLAN
+
+### HSRP Redundancy Configuration
+The backbone network implements Hot Standby Router Protocol (HSRP) for high availability:
+
+![HSRP Configuration](images/hsrp-configuration.png)
+
+- **Active Router Priority:** 150 (192.200.1.2)
+- **Standby Router Priority:** 100 (192.200.1.3) 
+- **Virtual IP:** 192.200.1.1
+- **Hello Timer:** 3 seconds
+- **Hold Timer:** 10 seconds
 
 ## 📊 Performance Metrics
 
@@ -104,12 +113,53 @@ The ENTC network implements 24 VLANs for different purposes:
 ✅ OSPF routing tables populated correctly  
 ✅ HSRP redundancy functional  
 
+## 📁 Repository Structure
+
+```
+├── Design Report.pdf          # Complete project documentation
+├── README.md                 # This file
+├── images/                   # Network topology diagrams
+│   ├── hsrp-configuration.png    # HSRP redundancy setup
+│   ├── entc-network-topology.png # ENTC department network design
+│   └── university-backbone.png   # Complete university backbone network
+├── Configuration Files/      # Router and switch configurations
+├── Simulation Files/         # Packet Tracer project files
+└── Documentation/           # Additional technical documentation
+```
+
+## 🚀 Future Enhancements
+
+### Scalability Considerations
+- Design supports 20-25 year operational lifetime
+- Modular architecture allows easy expansion
+- VLAN structure accommodates growth
+- Fiber infrastructure ready for higher speeds
+
+### Technology Upgrades
+- Migration path to newer Cisco hardware
+- Support for 10G SFP+ connections in production
+- Integration with modern network management systems
+- Enhanced security features implementation
+
 ## ⚠️ Important Notes
 
 - **Hardware Obsolescence:** Simulated devices are end-of-life; production implementation requires current-generation equipment
 - **Pricing Disclaimer:** Listed prices are indicative only due to hardware obsolescence
 - **Packet Tracer Limitations:** Some advanced features (10G SFP+) cannot be fully simulated
 
+## 🤝 Contributing
 
+This project was developed as part of academic coursework. For questions or discussions about the network design:
+
+1. Review the complete design report
+2. Examine network diagrams and configurations  
+3. Consider scalability and security requirements
+4. Evaluate cost-effectiveness of proposed solutions
+
+## 📞 Contact
+
+For technical inquiries regarding this network design project, please contact the development team through the University of Moratuwa, Department of Electronic & Telecommunication Engineering.
+
+---
 
 **Disclaimer:** This network design was created for educational purposes as part of the EN2150 course requirements. Implementation in production environments should involve thorough security assessments and updated hardware selections.
